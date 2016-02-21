@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta charset="utf-8">
+  <title>Création divColor</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $("#divColor").on("submit", function(e) {
+        e.preventDefault();
+        var choix = $("#couleur option:selected").text();
+        if (choix === "noir") {
+          $("#create").append('<div id="maDiv" class="black"></div>');
+        } else if (choix === "bleu") {
+          $("#create").append('<div id="maDiv" class="blue"></div>');
+        } else if (choix === "vert") {
+          $("#create").append('<div id="maDiv" class="green"></div>');
+        } else {
+          console.log("coucou")
+        }
+
+      });
+      $("div").on("click", function() {
+        $("#maDiv").remove();
+      });
+    });
+
+
+    
+
+  </script>
+
+</head>
+
+<body>
+  <form id="divColor">
+
+
+    <select id="couleur">
+      <!-- couleur -->
+      <option value="black">noir</option>
+      <option value="blue">bleu</option>
+      <option value="green">vert</option>
+
+    </select>
+
+    <button type="submit" name="button">Créer</button>
+    <div class="container">
+      <div id="create">
+
+      </div>
+    </div>
+
+  </form>
+</body>
+
+</html>

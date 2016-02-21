@@ -1,0 +1,27 @@
+.black{
+width: 200px;
+height: 50px;
+background-color: black;
+
+}
+
+.blue{
+  width: 200px;
+  height: 50px;
+  background-color: blue;
+
+}
+
+.green{
+  width: 200px;
+  height: 50px;
+  background-color: green;
+
+}
+
+.red{
+  width: 200px;
+  height: 50px;
+  background-color: red;
+
+}
